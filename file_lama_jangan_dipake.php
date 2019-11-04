@@ -92,7 +92,7 @@ function claim($token)
 	{
 	$data = '{"promo_code":"cobaingojek"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-	if ($claim['success'] == 1)
+	if ($claim['success'] == 2)
 		{
 		return $claim['data']['message'];
 		}
